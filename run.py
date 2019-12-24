@@ -61,11 +61,6 @@ def classify(df):
 
 
 if __name__ == "__main__":
-    df_1 = pd.read_csv("noncomplaint1700.csv", sep=",")
-    df_1['label'] = 1
-    df_0 = pd.read_csv("complaint1700.csv", sep=",")
-    df_0['label'] = 0
-    df = pd.concat([df_1, df_0])
-
+    df = pd.read_csv("data.csv", sep="\t")
     df = preprocessing(df)
     classify(df)
